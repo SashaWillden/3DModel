@@ -1,0 +1,33 @@
+/* Sasha Willden
+  29/11/2019 */
+
+#pragma once
+
+#include "ofMain.h"
+#include "castle.h"
+
+class ofApp : public ofBaseApp {
+
+public:
+	void setup();
+	void update();
+	void draw();
+
+	void keyPressed(int key);
+	void keyReleased(int key);
+	void mouseMoved(int x, int y);
+	void mouseDragged(int x, int y, int button);
+	void mousePressed(int x, int y, int button);
+	void mouseReleased(int x, int y, int button);
+	void mouseEntered(int x, int y);
+	void mouseExited(int x, int y);
+	void windowResized(int w, int h);
+	void dragEvent(ofDragInfo dragInfo);
+	void gotMessage(ofMessage msg);
+	ofVideoPlayer video;
+
+private:
+	ofLight light;
+	castle myCastle;
+	ofMaterial boxMaterial;
+};
